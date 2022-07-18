@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Veles</title>
+    <link rel="stylesheet" href="CSS/CSS_Index.css">
+    <link rel="stylesheet" href="CSS/CSS_Header.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/CSS_Landmarks.css">
+    <link rel="stylesheet" href="CSS/CSS_Map.css">
+    <link rel="stylesheet" href="CSS/CSS_Weather.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+<body id="body">
+<header id="navigation-bar">
+    <div class="left-section">
+        <div id="seal-white-opacity">
+            <img id="seal-white" src="Images/veles_grb_white.png" alt="Veles Grb">
+        </div>
+        <div id="seal-black-opacity">
+            <img id="seal-black" src="Images/veles_grb_black.png" alt="Veles Grb">
+        </div>
+        <p id="logo">Велес</p>
+    </div>
+    <div class="right-section">
+        <ul id="navigation-list">
+            <li><a href="#Home" class="navigation-links">Дома</a></li>
+            <li><a href="#Landmarks" class="navigation-links">Знаменитости</a></li>
+            <li><a href="#Map" class="navigation-links">Мапа</a></li>
+            <li><a href="#Weather" class="navigation-links">Време</a></li>
+        </ul>
+        <div id="buttons">
+            <button id="flag-button-1" onclick="flagAppear()">
+                <img src="Icons/mk.svg" alt="Macedonian flag">
+            </button>
+            <button id="flag-button-2" onclick="flagDisappear()">
+                <img src="Icons/mk.svg" alt="Macedonian flag">
+            </button>
+            <div id="between">
+                <div id="inner"></div>
+            </div>
+            <input type="search" id="search" placeholder="Пребарувај">
+            <button id="search-button-1" onclick="searchAppear()">
+                <i class="fa-solid fa-magnifying-glass fa-color"></i>
+            </button>
+            <button id="search-button-2" onclick="searchDisappear()">
+                <i class="fa-solid fa-magnifying-glass fa-color"></i>
+            </button>
+
+            <div id="menu-flags">
+                <div id="menu-flags-display">
+                    <ul>
+                        <li><a><img src="Icons/mk.svg" alt="Macedonian flag"><p>Македонски</p></a></li>
+                        <li><a href="index.html"><img src="Icons/gb.svg" alt="UK flag"><p>English</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="hamburger-menu-container">
+            <button id="hamburger-button" onclick="hamburgerMenuAppear();disableScroll()" ><i class="fa-solid fa-bars fa-color fa-2xl" id="fa-color"></i></button>
+        </div>
+    </div>
+
+    <div id="hamburger-menu">
+        <ul>
+            <li><i class="fa-solid fa-house fa-color"></i><a href="#Home" onclick="hamburgerMenuDisappear()">Дома</a></li>
+            <li><i class="fa-solid fa-flag fa-color"></i><a href="#Landmarks" onclick="hamburgerMenuDisappear()">Знаменитости</a></li>
+            <li><i class="fa-solid fa-map fa-color"></i><a href="#Map" onclick="hamburgerMenuDisappear()">Мапа</a></li>
+            <li><i class="fa-solid fa-wind"></i><a href="#Weather" onclick="hamburgerMenuDisappear()">Време</a></li>
+        </ul>
+        <div id="line"></div>
+        <div id="language">
+            <div id="language-text"><i class="fa-solid fa-globe fa-color"></i><p>Language</p></div>
+            <div id="language-flag"><a href="index.html"><img src="Icons/gb.svg" alt="UK flag"></a><a><img src="Icons/mk.svg" alt="Macedonian flag"></a></div>
+        </div>
+    </div>
+    <div id="hamburger-menu-shadow" onclick="hamburgerMenuDisappear();enableScroll()"></div>
+
+</header>
+
+
+
+<section id="Home">
+    <img src="Images/veles4-min.png" alt="background" id="background4" draggable="false">
+    <img src="Images/veles3-min.png" alt="background" id="background3" draggable="false">
+    <img src="Images/veles2-min.png" alt="background" id="background2" draggable="false">
+    <img src="Images/veles1-min.png" alt="background" id="background1" draggable="false">
+    <h1 id="title"><div id="word-1-mk">Добредојде</div><div id="word-2-mk">во</div>Велес</h1>
+</section>
+
+<section id="Landmarks">
+
+    <div id="text-container">
+        <div id="text-area">
+            <div class="text-element-opacity">
+                <div class="text-element" id="text1">
+                    <h1>Саат Кула</h1>
+                    <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    <audio controls class="source">
+                        <source src="audio%201.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text2">
+                    <h1>Спомен-куќа на Кочо Рацин</h1>
+                    <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    <audio controls class="source">
+                        <source src="audio%202.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text3">
+                    <h1>Спомен костурница</h1>
+                    <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    <audio controls class="source">
+                        <source src="audio%201.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text4">
+                    <h1>Театар „Џинот“</h1>
+                    <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    <audio controls class="source">
+                        <source src="audio%201.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text5">
+                    <h1>Езеро Младост</h1>
+                    <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    <audio controls class="source">
+                        <source src="audio%201.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text6">
+                    <h1>Свети Пантелејмон</h1>
+                    <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    <audio controls class="source">
+                        <source src="audio%201.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text7">
+                    <h1>Споменик на Гемиџиите</h1>
+                    <p>Bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</p>
+                    <audio controls class="source">
+                        <source src="audio%201.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div id="arrows">
+            <button onclick="rightScroll()" id="left-arrow"><i class="fa-solid fa-chevron-left fa-color"></i></button>
+            <button onclick="leftScroll()" id="right-arrow"><i class="fa-solid fa-chevron-right fa-color"></i></button>
+        </div>
+    </div>
+
+    <div class="scroll-container">
+        <div class="scroll-element" id="img1" onclick="textAppear(0)"><div class="shade"><p class="text-shade">Саат Кула</p></div></div>
+        <div class="scroll-element" id="img2" onclick="textAppear(1)"><div class="shade"><p class="text-shade">Спомен-куќа на Кочо Рацин</p></div></div>
+        <div class="scroll-element" id="img3" onclick="textAppear(2)"><div class="shade"><p class="text-shade">Спомен костурница</p></div></div>
+        <div class="scroll-element" id="img4" onclick="textAppear(3)"><div class="shade"><p class="text-shade">Театар „Џинот“</p></div></div>
+        <div class="scroll-element" id="img5" onclick="textAppear(4)"><div class="shade"><p class="text-shade">Езеро Младост</p></div></div>
+        <div class="scroll-element" id="img6" onclick="textAppear(5)"><div class="shade"><p class="text-shade">Свети Пантелејмон</p></div></div>
+        <div class="scroll-element" id="img7" onclick="textAppear(6)"><div class="shade"><p class="text-shade">Споменик на Гемиџиите</p></div></div>
+    </div>
+
+</section>
+
+<section id="Map">
+    <iframe id="map-iframe" src="https://my.atlistmaps.com/map/c3af057f-fc19-4546-8ae6-91c3c63550e4?share=true" allow="geolocation" width="100%" height="400px" frameborder="0" scrolling="no" allowfullscreen></iframe>
+</section>
+
+<section id="Weather">
+    <div id="weather-container">
+        <div id="weather-left">
+            <div id="clock">0:00</div>
+            <div class="tomorrow" data-location-id="067551" data-language="EN" data-unit-system="METRIC" data-skin="dark" data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
+                <a href="https://www.tomorrow.io/weather/" rel="nofollow noopener noreferrer" target="_blank" style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
+                    <img alt="Powered by Tomorrow.io" src="https://weather-website-client.tomorrow.io/img/powered-by-tomorrow.svg" width="140" height="15"/>
+                </a>
+            </div>
+        </div>
+        <div id="weather-right">
+            <div id="weather-right-top"></div>
+
+            <div id="weather-right-bottom">
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script src="JavaScript/JS_Veles.js"></script>
+
+</body>
+</html>

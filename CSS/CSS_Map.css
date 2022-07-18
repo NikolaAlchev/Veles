@@ -1,0 +1,22 @@
+#Map{
+    height: 100vh;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #f5f5f5;
+}
+#map-iframe{
+    position: absolute;
+    width: 85%;
+    height: 80vh;
+    bottom: 5vh;
+}
+@media (max-width: 750px) {
+    #map-iframe{
+        height: 85%;
+        top: 100px;
+        box-shadow: 5px 5px 15px black;
+    }
+}
